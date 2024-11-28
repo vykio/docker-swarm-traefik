@@ -1,0 +1,12 @@
+#! /usr/bin/env bash
+
+export OP_ACCOUNT="${OP_ACCOUNT}"
+
+USERNAME=$(op read "op://<OP PATH FOR USERNAME>")
+PASSWORD=$(op read "op://<OP PATH FOR PASSWORD>")
+
+export EMAIL=
+export DOMAIN=
+export USERNAME="${USERNAME}"
+export PASSWORD="${PASSWORD}"
+export HASHED_PASSWORD=$(openssl passwd -apr1 $PASSWORD)
