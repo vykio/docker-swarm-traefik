@@ -9,4 +9,4 @@ export EMAIL=
 export DOMAIN=
 export USERNAME="${USERNAME}"
 export PASSWORD="${PASSWORD}"
-export HASHED_PASSWORD=$(openssl passwd -apr1 $PASSWORD)
+export HASHED_PASSWORD=$(echo "${PASSWORD}" | openssl passwd -apr1 -stdin)
